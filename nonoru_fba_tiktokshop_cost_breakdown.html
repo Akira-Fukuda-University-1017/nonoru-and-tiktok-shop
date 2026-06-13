@@ -1,0 +1,334 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.sec{margin-bottom:2rem;}
+.sec-title{font-size:12px;font-weight:500;color:var(--color-text-secondary);letter-spacing:.06em;text-transform:uppercase;padding-bottom:8px;border-bottom:.5px solid var(--color-border-tertiary);margin-bottom:12px;}
+.card{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.mc{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.75rem 1rem;}
+.ml{font-size:12px;color:var(--color-text-secondary);margin-bottom:3px;}
+.mv{font-size:20px;font-weight:500;color:var(--color-text-primary);}
+.ms{font-size:11px;color:var(--color-text-secondary);margin-top:2px;}
+.row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:.5px solid var(--color-border-tertiary);}
+.row:last-child{border-bottom:none;}
+.rl{font-size:13px;color:var(--color-text-secondary);}
+.rv{font-size:13px;font-weight:500;color:var(--color-text-primary);}
+.rv.neg{color:#D85A30;}
+.rv.pos{color:#1D9E75;}
+.badge{display:inline-block;font-size:11px;font-weight:500;padding:2px 8px;border-radius:var(--border-radius-md);}
+.b-green{background:#EAF3DE;color:#3B6D11;}
+.b-amber{background:#FAEEDA;color:#854F0B;}
+.b-coral{background:#FAECE7;color:#993C1D;}
+.b-blue{background:#E6F1FB;color:#185FA5;}
+.b-purple{background:#EEEDFE;color:#3C3489;}
+.hl{background:#EAF3DE;border-radius:var(--border-radius-md);padding:9px 13px;margin-top:10px;}
+.hl p{font-size:12px;color:#3B6D11;line-height:1.6;}
+.wn{background:#FAEEDA;border-radius:var(--border-radius-md);padding:9px 13px;margin-top:10px;}
+.wn p{font-size:12px;color:#854F0B;line-height:1.6;}
+.al{background:#FCEBEB;border-radius:var(--border-radius-md);padding:9px 13px;margin-top:10px;}
+.al p{font-size:12px;color:#A32D2D;line-height:1.6;}
+.sr{display:flex;align-items:center;gap:10px;margin:8px 0;}
+.sr label{font-size:12px;color:var(--color-text-secondary);min-width:110px;}
+.sr input{flex:1;}
+.sr span{font-size:12px;font-weight:500;min-width:70px;text-align:right;color:var(--color-text-primary);}
+.waterfall{display:flex;gap:4px;align-items:flex-end;height:180px;margin:16px 0 8px;}
+.wbar{display:flex;flex-direction:column;align-items:center;flex:1;}
+.wbar-fill{width:100%;border-radius:4px 4px 0 0;}
+.wbar-label{font-size:10px;color:var(--color-text-secondary);margin-top:4px;text-align:center;line-height:1.3;}
+.wbar-val{font-size:11px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px;}
+.scenario-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:4px;}
+.sc-card{border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.875rem;background:var(--color-background-primary);}
+.sc-card.best{border:2px solid #1D9E75;}
+.sc-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;}
+.cost-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;}
+.cost-row .lbl{color:var(--color-text-secondary);}
+.cost-row .val{font-weight:500;}
+.divider{border-top:.5px solid var(--color-border-tertiary);margin:6px 0;}
+.profit-row{display:flex;justify-content:space-between;font-size:13px;font-weight:500;padding:4px 0;}
+.tool-row{display:flex;justify-content:space-between;font-size:11px;color:var(--color-text-secondary);padding:2px 0;}
+</style>
+
+<h2 class="sr-only">TikTok Shop + Amazon FBA連携コスト試算ダッシュボード</h2>
+
+<div style="padding:1rem 0;">
+
+<div class="sec">
+  <div class="sec-title">連携ツール（ByteStand）月額費用</div>
+  <div class="g3">
+    <div class="card">
+      <div style="margin-bottom:8px;"><span class="badge b-blue">Starter</span></div>
+      <div class="ml">月額</div><div class="mv">約2,300円</div>
+      <div class="ms">$15/月・200注文まで</div>
+      <div style="margin-top:10px;font-size:12px;color:var(--color-text-secondary);line-height:1.7;">月50注文 → 46円/注文<br>月100注文 → 23円/注文<br>月200注文 → 12円/注文</div>
+      <div class="hl"><p>スタート期はここから。50注文/月でも全体コストへの影響は小さい。</p></div>
+    </div>
+    <div class="card" style="border:2px solid #1D9E75;">
+      <div style="margin-bottom:8px;"><span class="badge b-green">Growth（成長期）</span></div>
+      <div class="ml">月額</div><div class="mv">約7,500円</div>
+      <div class="ms">$49/月・1,000注文まで</div>
+      <div style="margin-top:10px;font-size:12px;color:var(--color-text-secondary);line-height:1.7;">月200注文 → 37円/注文<br>月500注文 → 15円/注文<br>月1,000注文 → 7円/注文</div>
+      <div class="hl"><p>月200注文を超えたらこちらへ移行。注文が増えるほど1件あたりコストが下がる。</p></div>
+    </div>
+    <div class="card">
+      <div style="margin-bottom:8px;"><span class="badge b-purple">Scale</span></div>
+      <div class="ml">月額</div><div class="mv">約15,000円</div>
+      <div class="ms">$99/月・無制限</div>
+      <div style="margin-top:10px;font-size:12px;color:var(--color-text-secondary);line-height:1.7;">月1,000注文超で選択<br>注文無制限<br>優先サポート付き</div>
+      <div class="wn"><p>今の段階では不要。将来的な選択肢として参考に。</p></div>
+    </div>
+  </div>
+
+  <div style="margin-top:12px;padding:10px 14px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);">
+    <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;">
+      <strong style="color:var(--color-text-primary);font-weight:500;">ByteStandとは：</strong>TikTok Shopに注文が入ると自動でAmazon MCF（マルチチャネルフルフィルメント）に発送依頼を転送するSaaS。在庫はFBAに入れたまま、TikTok Shop注文もAmazonが出荷してくれる仕組み。
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Amazon MCF（マルチチャネルサービス）日本 送料目安</div>
+  <div class="g2">
+    <div class="card">
+      <h3 style="font-size:14px;font-weight:500;margin-bottom:10px;">商品サイズ別 MCF手数料（1個）</h3>
+      <div class="row"><span class="rl">小型（〜100g）スカルプブラシ等</span><span class="rv neg">約490〜560円</span></div>
+      <div class="row"><span class="rl">通常〜200g　ツインブラシ等</span><span class="rv neg">約600〜660円</span></div>
+      <div class="row"><span class="rl">通常〜500g　線香立て+箱等</span><span class="rv neg">約660〜720円</span></div>
+      <div class="row"><span class="rl">通常〜1kg　セット商品等</span><span class="rv neg">約750〜820円</span></div>
+      <div class="wn"><p>MCFはFBA配送より約20〜30%割高。ただしTikTok Shop手数料が安い分、トータルでAmazon販売と近い水準になる。</p></div>
+    </div>
+    <div class="card">
+      <h3 style="font-size:14px;font-weight:500;margin-bottom:10px;">FBA vs MCF 比較（同一商品）</h3>
+      <div class="row"><span class="rl">通常サイズ FBA手数料</span><span class="rv">約520円</span></div>
+      <div class="row"><span class="rl">通常サイズ MCF手数料</span><span class="rv neg">約650円（+130円）</span></div>
+      <div class="row"><span class="rl">差額の理由</span><span class="rv">非Amazon注文割増</span></div>
+      <div class="row"><span class="rl">在庫の持ち方</span><span class="rv">FBAと同じ在庫でOK</span></div>
+      <div class="hl"><p>FBAに入れた在庫をそのままTikTok Shop注文にも流用できる。在庫を二重管理しなくてよい点が最大のメリット。</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">1個あたり利益シミュレーター（スライダーで調整）</div>
+  <div class="card">
+    <div class="sr">
+      <label>販売単価</label>
+      <input type="range" id="price" min="2000" max="3000" step="100" value="2500">
+      <span id="price-out">2,500円</span>
+    </div>
+    <div class="sr">
+      <label>原価率（COGS）</label>
+      <input type="range" id="cogs" min="20" max="50" step="1" value="35">
+      <span id="cogs-out">35%</span>
+    </div>
+    <div class="sr">
+      <label>MCF手数料</label>
+      <input type="range" id="mcf" min="490" max="820" step="10" value="630">
+      <span id="mcf-out">630円</span>
+    </div>
+
+    <div style="margin-top:16px;">
+      <div class="scenario-grid">
+        <div class="sc-card">
+          <div class="sc-title">A: Amazon FBAのみ</div>
+          <div class="cost-row"><span class="lbl">販売手数料（15%）</span><span class="val" style="color:#D85A30;" id="a-fee">-375円</span></div>
+          <div class="cost-row"><span class="lbl">FBA手数料</span><span class="val" style="color:#D85A30;">-520円</span></div>
+          <div class="cost-row"><span class="lbl">原価（COGS）</span><span class="val" style="color:#D85A30;" id="a-cogs">-875円</span></div>
+          <div class="cost-row"><span class="lbl">連携ツール</span><span class="val">不要</span></div>
+          <div class="divider"></div>
+          <div class="profit-row"><span>1個の粗利</span><span style="color:#1D9E75;" id="a-profit">730円</span></div>
+          <div class="tool-row"><span>粗利率</span><span id="a-margin">29.2%</span></div>
+        </div>
+        <div class="sc-card best">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;"><span class="badge b-green">推奨</span></div>
+          <div class="sc-title">B: TikTok Shop + MCF</div>
+          <div class="cost-row"><span class="lbl">TikTok手数料（7%）</span><span class="val" style="color:#D85A30;" id="b-fee">-175円</span></div>
+          <div class="cost-row"><span class="lbl">MCF手数料</span><span class="val" style="color:#D85A30;" id="b-mcf">-630円</span></div>
+          <div class="cost-row"><span class="lbl">原価（COGS）</span><span class="val" style="color:#D85A30;" id="b-cogs">-875円</span></div>
+          <div class="cost-row"><span class="lbl">ByteStand（変動）</span><span class="val" style="color:#EF9F27;" id="b-tool">別途</span></div>
+          <div class="divider"></div>
+          <div class="profit-row"><span>1個の粗利</span><span style="color:#1D9E75;" id="b-profit">820円</span></div>
+          <div class="tool-row"><span>粗利率（ツール前）</span><span id="b-margin">32.8%</span></div>
+        </div>
+        <div class="sc-card">
+          <div class="sc-title">C: TikTok Shop + 自社発送</div>
+          <div class="cost-row"><span class="lbl">TikTok手数料（7%）</span><span class="val" style="color:#D85A30;" id="c-fee">-175円</span></div>
+          <div class="cost-row"><span class="lbl">自社配送費（目安）</span><span class="val" style="color:#D85A30;">-600円</span></div>
+          <div class="cost-row"><span class="lbl">原価（COGS）</span><span class="val" style="color:#D85A30;" id="c-cogs">-875円</span></div>
+          <div class="cost-row"><span class="lbl">連携ツール</span><span class="val">不要</span></div>
+          <div class="divider"></div>
+          <div class="profit-row"><span>1個の粗利</span><span style="color:#1D9E75;" id="c-profit">850円</span></div>
+          <div class="tool-row"><span>粗利率</span><span id="c-margin">34.0%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">月次 P&L シミュレーター（TikTok Shop + MCF 想定）</div>
+  <div class="card">
+    <div class="sr">
+      <label>月間販売数</label>
+      <input type="range" id="orders" min="10" max="500" step="10" value="50">
+      <span id="orders-out">50個</span>
+    </div>
+    <div class="sr">
+      <label>ByteStandプラン</label>
+      <select id="plan" style="flex:1;font-size:12px;padding:4px 8px;border:.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);">
+        <option value="2300">Starter（2,300円/月）</option>
+        <option value="7500">Growth（7,500円/月）</option>
+        <option value="15000">Scale（15,000円/月）</option>
+      </select>
+      <span style="min-width:70px;"></span>
+    </div>
+
+    <div class="g2" style="margin-top:14px;gap:10px;">
+      <div>
+        <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;font-weight:500;">月間コスト内訳</div>
+        <div class="row"><span class="rl">売上</span><span class="rv pos" id="m-rev">125,000円</span></div>
+        <div class="row"><span class="rl">TikTok手数料（7%）</span><span class="rv neg" id="m-tk">-8,750円</span></div>
+        <div class="row"><span class="rl">MCF手数料</span><span class="rv neg" id="m-mcf">-31,500円</span></div>
+        <div class="row"><span class="rl">原価（COGS）</span><span class="rv neg" id="m-cogs">-43,750円</span></div>
+        <div class="row" style="border-bottom:.5px dashed var(--color-border-secondary);"><span class="rl">ByteStand</span><span class="rv neg" id="m-tool">-2,300円</span></div>
+        <div class="row"><span class="rl">KlingAI Pro</span><span class="rv neg">-4,500円</span></div>
+        <div class="row" style="font-weight:500;"><span class="rl">月間純利益</span><span id="m-net" style="font-size:16px;font-weight:500;color:#1D9E75;">34,200円</span></div>
+      </div>
+      <div>
+        <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;font-weight:500;">サマリー指標</div>
+        <div class="mc" style="margin-bottom:8px;">
+          <div class="ml">月間純利益率</div>
+          <div class="mv" id="m-margin-pct">27.4%</div>
+          <div class="ms">売上に対する比率</div>
+        </div>
+        <div class="mc" style="margin-bottom:8px;">
+          <div class="ml">固定費回収 必要注文数</div>
+          <div class="mv" id="m-breakeven">9個</div>
+          <div class="ms">ByteStand + KlingAI分</div>
+        </div>
+        <div class="mc">
+          <div class="ml">ツール1個あたりコスト</div>
+          <div class="mv" id="m-pertool">136円/個</div>
+          <div class="ms">ByteStand ÷ 販売数</div>
+        </div>
+        <div id="m-alert" class="hl" style="margin-top:8px;"><p id="m-alert-text">現在の設定で黒字です。</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">月次コスト全体マップ（スタート期）</div>
+  <div class="card">
+    <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">固定費合計（Starter + KlingAI Pro）</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+      <div style="flex:1;background:var(--color-background-secondary);border-radius:4px;height:28px;overflow:hidden;position:relative;">
+        <div style="position:absolute;left:0;top:0;height:100%;width:33%;background:#EEEDFE;display:flex;align-items:center;padding-left:8px;">
+          <span style="font-size:11px;font-weight:500;color:#3C3489;">KlingAI</span>
+        </div>
+        <div style="position:absolute;left:33%;top:0;height:100%;width:17%;background:#E6F1FB;display:flex;align-items:center;padding-left:6px;">
+          <span style="font-size:11px;font-weight:500;color:#185FA5;">BS</span>
+        </div>
+        <div style="position:absolute;left:50%;top:0;height:100%;width:50%;background:var(--color-background-secondary);display:flex;align-items:center;padding-left:8px;">
+          <span style="font-size:11px;color:var(--color-text-secondary);">← 売上で吸収</span>
+        </div>
+      </div>
+      <span style="font-size:13px;font-weight:500;color:var(--color-text-primary);">6,800円/月</span>
+    </div>
+    <div style="display:flex;gap:16px;font-size:11px;color:var(--color-text-secondary);">
+      <span><span style="display:inline-block;width:10px;height:10px;background:#EEEDFE;border-radius:2px;margin-right:3px;vertical-align:middle;"></span>KlingAI Pro 4,500円（66%）</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#E6F1FB;border-radius:2px;margin-right:3px;vertical-align:middle;"></span>ByteStand Starter 2,300円（34%）</span>
+    </div>
+    <div class="hl" style="margin-top:12px;"><p>月9個売るだけで固定費はゼロに。粗利820円 × 9個 = 7,380円 で6,800円の固定費を回収。10個目から純利益になる設計。</p></div>
+  </div>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const fmt = n => Math.round(n).toLocaleString('ja-JP');
+const pct = n => n.toFixed(1) + '%';
+
+function update() {
+  const price = parseInt($('price').value);
+  const cogsRate = parseInt($('cogs').value) / 100;
+  const mcfFee = parseInt($('mcf').value);
+  const orders = parseInt($('orders').value);
+  const planCost = parseInt($('plan').value);
+
+  $('price-out').textContent = fmt(price) + '円';
+  $('cogs-out').textContent = $('cogs').value + '%';
+  $('mcf-out').textContent = fmt(mcfFee) + '円';
+  $('orders-out').textContent = orders + '個';
+
+  const cogs = Math.round(price * cogsRate);
+  const aFee = Math.round(price * 0.15);
+  const bFee = Math.round(price * 0.07);
+  const cFee = Math.round(price * 0.07);
+
+  const aProfit = price - aFee - 520 - cogs;
+  const bProfit = price - bFee - mcfFee - cogs;
+  const cProfit = price - cFee - 600 - cogs;
+
+  $('a-fee').textContent = '-' + fmt(aFee) + '円';
+  $('a-cogs').textContent = '-' + fmt(cogs) + '円';
+  $('a-profit').textContent = fmt(aProfit) + '円';
+  $('a-margin').textContent = pct(aProfit / price * 100);
+
+  $('b-fee').textContent = '-' + fmt(bFee) + '円';
+  $('b-mcf').textContent = '-' + fmt(mcfFee) + '円';
+  $('b-cogs').textContent = '-' + fmt(cogs) + '円';
+  $('b-profit').textContent = fmt(bProfit) + '円';
+  $('b-margin').textContent = pct(bProfit / price * 100);
+
+  $('c-fee').textContent = '-' + fmt(cFee) + '円';
+  $('c-cogs').textContent = '-' + fmt(cogs) + '円';
+  $('c-profit').textContent = fmt(cProfit) + '円';
+  $('c-margin').textContent = pct(cProfit / price * 100);
+
+  const klingai = 4500;
+  const fixedTotal = planCost + klingai;
+  const rev = orders * price;
+  const tkFee = Math.round(rev * 0.07);
+  const totalMcf = orders * mcfFee;
+  const totalCogs = Math.round(rev * cogsRate);
+  const netProfit = rev - tkFee - totalMcf - totalCogs - planCost - klingai;
+  const marginPct = netProfit / rev * 100;
+  const breakeven = Math.ceil(fixedTotal / bProfit);
+  const perTool = Math.round(planCost / orders);
+
+  $('m-rev').textContent = fmt(rev) + '円';
+  $('m-tk').textContent = '-' + fmt(tkFee) + '円';
+  $('m-mcf').textContent = '-' + fmt(totalMcf) + '円';
+  $('m-cogs').textContent = '-' + fmt(totalCogs) + '円';
+  $('m-tool').textContent = '-' + fmt(planCost) + '円';
+  $('m-net').textContent = fmt(netProfit) + '円';
+  $('m-net').style.color = netProfit >= 0 ? '#1D9E75' : '#D85A30';
+  $('m-margin-pct').textContent = pct(marginPct);
+  $('m-breakeven').textContent = breakeven + '個';
+  $('m-pertool').textContent = fmt(perTool) + '円/個';
+
+  const alertEl = $('m-alert');
+  const alertText = $('m-alert-text');
+  if (netProfit < 0) {
+    alertEl.className = 'al';
+    alertEl.style.marginTop = '8px';
+    alertText.textContent = '赤字です。販売数を増やすか、MCF手数料を低減できる商品サイズの見直しを。';
+  } else if (netProfit < 10000) {
+    alertEl.className = 'wn';
+    alertEl.style.marginTop = '8px';
+    alertText.textContent = '黒字ですが薄利です。月' + (breakeven + 10) + '個超えると利益感が出てきます。';
+  } else {
+    alertEl.className = 'hl';
+    alertEl.style.marginTop = '8px';
+    alertText.textContent = '月' + orders + '個で' + fmt(netProfit) + '円の純利益。固定費回収は月' + breakeven + '個から。';
+  }
+}
+
+['price','cogs','mcf','orders','plan'].forEach(id => {
+  $(id).addEventListener('input', update);
+});
+update();
+</script>
